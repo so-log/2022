@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <h1 class="logo">Todo</h1>
-        <p class="date">{{ timestamp }}</p>
+        <div class="date">{{ timestamp }}</div>
     </header>
 </template>
 <script>
