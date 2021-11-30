@@ -5,6 +5,7 @@
     box-sizing: border-box;
     outline: none;
     font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
 }
 
 html {
@@ -163,4 +164,101 @@ input{
     border-radius: 2rem;
     height: 380px;
     background-color: rgba( 255, 255, 255, 0.3 );
+}
+
+/* Controller */
+.blind {
+    display: none;
+}
+
+.select {
+    position: relative;
+    top: 23px;
+    left: 30px;
+}
+
+button.clear {
+    float: right;
+    position: relative;
+    right: 20px;
+    border: 0px;
+    border-radius: 0.3rem;
+    /* font-size: 10px; */
+    letter-spacing: 0.014rem;
+    /* font-size: 1.4rem; */
+    color: #ababab;
+    transition: color 0.2s;
+}
+
+button.clear:hover{
+    color: #8e8e8e;
+}
+
+/* List */
+/* 수정해나가기 */
+.list {
+    position: relative;
+    margin-top: 40px;
+    margin-left: -30px;
+}
+
+input #list_item {
+    /* display: none; */
+}
+
+.list_item {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem 0 5rem;
+    /* background-color: #fff;
+    border-radius: 4px; */
+}
+
+.list__text {
+    color: #bababa;
+    text-decoration: line-through;
+}
+
+.list_item label {
+    padding: 1.6rem 0;
+    font-size: 1.5rem;
+    line-height: 1.24;
+    letter-spacing: 0.017rem;
+    cursor: pointer;
+}
+
+.list_item label:before {
+    position: absolute;
+    top: 10%;
+    left: 1.4rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 1px #818181;
+    background-color: #ffffff;
+    content: "";
+    cursor: pointer;
+}
+
+/* 다음 네모 박스 */
+.list_item label:after {
+    position: absolute;
+    display: block;
+    top: 10%;
+    left: 1.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 1px #818181;
+    background-color: #ffffff;
+    content: "";
+    cursor: pointer;
+}
+
+.list_text {
+    margin-top: -1.4rem;
+    position: relative;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
