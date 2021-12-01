@@ -1,3 +1,5 @@
 <template>
-    <footer class="footer">오늘 하루도 화이팅!💚</footer>
+    <footer class="footer">
+        <h5>오늘 하루도 화이팅!💚</h5>
+    </footer>
 </template>

@@ -13,7 +13,7 @@ html {
     font-size: 13px;
     letter-spacing: 0.1rem;
     color: #000;
-    background: linear-gradient(#d8ccf2, #ec998c);
+    /* background: linear-gradient(#d8ccf2, #ec998c); */
 }
 
 body {
@@ -33,6 +33,7 @@ header.header {
     height: 77px;
     background: #fff;
     color: #483834;
+    border-bottom: 1px solid #3f291a;
 }
 
 h1.logo {
@@ -46,11 +47,15 @@ h1.logo {
     font-family: yg-jalnan;
     font-weight: lighter;
     position: relative;
-    text-align: right;
-    padding: 30px 25px;
+    text-align: center;
+    padding: 95px 25px;
 }
 
 /** Title */
+
+.top {
+    margin: 60px 0 50px;
+}
 
 /* 첫번째 말풍선 */
 h3.title_message {
@@ -61,7 +66,7 @@ h3.title_message {
 
 .speech-bubble {
 	position: relative;
-	background: #fff;
+	background: #dbd8d9;
 	border-radius: 50.4em;
     height: 35px;
 }
@@ -74,7 +79,7 @@ h3.title_message {
 	width: 0;
 	height: 0;
 	border: 19px solid transparent;
-	border-right-color: #fff;
+	border-right-color: #dbd8d9;
 	border-left: 0;
 	border-bottom: 0;
 	margin-top: -2.5px;
@@ -108,7 +113,7 @@ h2.title_task-total {
 
 .speech-bubble2 {
     position: relative;
-    background: #fff;
+    background: #dbd8d9;
     border-radius: 1.3999999999999986em;
     height: 115px;
 }
@@ -121,7 +126,7 @@ h2.title_task-total {
     width: 0;
     height: 0;
     border: 19px solid transparent;
-    border-right-color: #fff;
+    border-right-color: #dbd8d9;
     border-left: 0;
     border-bottom: 0;
     margin-top: 27.5px;
@@ -136,6 +141,7 @@ input{
 
 .speech-bubble3 {
 	position: relative;
+    top: 20px;
 	background: #545454;
 	border-radius: 50.4em;
     height: 35px;
@@ -157,6 +163,9 @@ input{
 }
 
 /** LIST */
+.todoMain {
+    background: #faa384;
+}
 
 .op {
     position: relative;
@@ -261,4 +270,42 @@ input #list_item {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.list_right {
+    text-align: right;
+    /* margin-left: 1.3rem; */
+}
+
+button.list_delete {
+    background: none;
+    border: 0px;
+    position: relative;
+    top: -50px;
+    right: -25px;
+    font-size: 20px;
+    color: #ababab;
+    font-weight: lighter;
+}
+
+button.list_delete:hover{
+    color: #8e8e8e;
+    /* color: #343434; */
+}
+
+p.list_date {
+    font-size: 10px;
+    font-weight: bold;
+    color: #939393;
+    letter-spacing: 0.02rem;
+    position: relative;
+    top: -60px;
+    right: -20px;
+}
+
+/** Footer */
+footer.footer {
+    text-align: center;
+    color: #d7d5d5;
+    background: #faa384;
 }
