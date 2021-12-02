@@ -48,13 +48,12 @@ h1.logo {
     font-weight: lighter;
     position: relative;
     text-align: center;
-    padding: 95px 25px;
 }
 
 /** Title */
 
 .top {
-    margin: 60px 0 50px;
+    margin: 30px 0 50px;
 }
 
 /* 첫번째 말풍선 */
@@ -88,7 +87,8 @@ h3.title_message {
 
 /* 두번째 말풍선 */
 .title_task.speech-bubble2 {
-    margin-top: -15px;
+    margin-top: 
+    15px;
 }
 
 h3.task_message {
@@ -100,15 +100,26 @@ h3.task_message {
 h3.task_message2 {
     position: absolute;
     left: 15px;
-    margin-top: -10px;
+    margin-top: 20px;
 }
 
-h2.title_task-total {
+.task_count {
     position: relative;
     top: 30px;
-    left: 30px;
-    font-family: yg-jalnan;
+    left: 20px;
+
+}
+
+em.title_task-left {
+    font-family: 'yg-jalnan';
+    font-style: normal;
     font-size: 3rem;
+}
+
+em.title_task-total {
+    font-family: 'yg-jalnan';
+    font-style: normal;
+    font-size: 2rem;
 }
 
 .speech-bubble2 {
@@ -211,10 +222,6 @@ button.clear:hover{
     margin-left: -30px;
 }
 
-input #list_item {
-    /* display: none; */
-}
-
 .list_item {
     position: relative;
     width: 100%;
@@ -226,6 +233,10 @@ input #list_item {
 .list__text {
     color: #bababa;
     text-decoration: line-through;
+}
+
+input[type=checkbox] {
+    display: none;
 }
 
 .list_item label {
