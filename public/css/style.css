@@ -19,6 +19,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #faa384;
 }
 
 .main {
@@ -43,24 +44,34 @@ h1.logo {
     top: 5px;
 }
 
-.date {
-    font-family: yg-jalnan;
-    font-weight: lighter;
-    position: relative;
-    text-align: center;
-}
-
 /** Title */
 
 .top {
-    margin: 30px 0 50px;
+    width: 100%;
+    min-height: 25rem;
+    background-color: #fff;
+}
+
+.date {
+    font-family: yg-jalnan;
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.title.main {
+    margin-top: 40px;
 }
 
 /* 첫번째 말풍선 */
 h3.title_message {
-    left: 15px;
+    left: 18px;
     position: absolute;
-    margin-top: 3px;
+    margin-top: 5px;
+}
+
+h3.title_message.name {
+    left: 200px;
 }
 
 .speech-bubble {
@@ -126,7 +137,7 @@ em.title_task-total {
     position: relative;
     background: #dbd8d9;
     border-radius: 1.3999999999999986em;
-    height: 115px;
+    height: 125px;
 }
 
 .speech-bubble2:after {
@@ -152,7 +163,7 @@ input{
 
 .speech-bubble3 {
 	position: relative;
-    top: 20px;
+    top: 9px;
 	background: #545454;
 	border-radius: 50.4em;
     height: 35px;

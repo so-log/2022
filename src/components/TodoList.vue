@@ -13,7 +13,7 @@
                 <button class="clear" v-on:click="clearTodo">Clear All</button>
             </div>
             <!-- todolist -->
-            <ul class="list main">
+            <ul class="list main" :class="listempty">
                 <li class="list_item" v-for="(todoItem, index) in propsdata" :key="todoItem.item">
                     <!-- todo -->
                     <input type="checkbox" :id="todoItem.item" :checked="todoItem.completed === true" v-on:change="toggleComplete(todoItem)" />
@@ -32,11 +32,16 @@
 </template>
 <script>
 export default {
-    props: ["propsdata"],
+    props: ["propsdata", "propEmpty"],
     data(){
         return {
             selected: "data-desc"
         };
+    },
+    computed: {
+        listempty() {
+            return this.propEmpty?"empty":null;
+        }
     },
     methods: {
         // 정렬
@@ -48,8 +53,8 @@ export default {
             this.$emit("toggleItem", todoItem);
         },
         // 삭제
-        reemoveTodo(todoItem, index) {
-            this.$emit("removeItem", todoItem, index);
+        removeTodo(todoItem, index) {
+        this.$emit("removeItem", todoItem, index);
         },
         // crealAll
         clearTodo(){

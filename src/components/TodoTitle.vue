@@ -4,7 +4,8 @@
         <!-- speech bubble -->
         <div class="title main">
             <div class="speech-bubble">
-                <h3 class="title_message">{{ message }}</h3>
+                <h3 class="title_message">Good {{ message }} ,</h3>
+                <h3 class="title_message name">so !</h3>
             </div>
             <div class="title_task speech-bubble2">
                 <h3 class="task_message">You've got</h3>
@@ -17,7 +18,7 @@
         </div>
         <!-- innput -->
         <div class="add main speech-bubble3">
-            <input type="text" class="add_input" placeholder="Enter your task here" v-model="newTodoItem" v-on:keyup.enter="addTodoItem" />
+            <input type="text" class="add_input" placeholder="Enter your task here" v-model="newTodoItem" v-on:keypress.enter="addTodoItem" />
             <button class="add_button" v-on:click="addTodoItem"><i class="xi-plus-circle-o"></i></button>
         </div>
     </div>
@@ -35,12 +36,14 @@ export default {
             newTodoItem: "",
 
             // speech bubble
-            message: "Hi, so !",
-            taskTotal: 5
+            message: "",
         };
     },
     created(){
         this.timestamp = `${getDate().month}/${getDate().date} ${getDate().week}`;
+    },
+    mounted(){
+        this.message = getDate().daytime;
     },
     methods: {
         // 추가

@@ -2,8 +2,11 @@
   <div id="app">
     <TodoHeader />
     <TodoTitle v-on:addItem="addOneItem" :propsdata="checkCount" />
-    <TodoList :propsdata="todoItems" v-on:sortItem="sortAllItem" v-on:clearAll="clearAllItem" v-on:toggleItem="toggleOneItem" v-on:removeItem="removeOneItem" />
+    <TodoList :propEmpty="isEmpty" :propsdata="todoItems" v-on:sortItem="sortAllItem" v-on:clearAll="clearAllItem" v-on:toggleItem="toggleOneItem" v-on:removeItem="removeOneItem" />
     <TodoFooter />
+    <Modal v-show="showModal" v-on:close="showModal=false">
+      <template v-slot:modal-text>{{ modalText }}</template>
+    </Modal>
   </div>
 </template>
 
@@ -13,6 +16,7 @@ import TodoTitle from './components/TodoTitle.vue'
 import TodoList from './components/TodoList.vue'
 import TodoFooter from './components/TodoFooter.vue'
 import getDate from './models/getDate.js'
+import Modal from './components/common/Modal.vue'
 
 export default {
   name: 'App',
@@ -20,11 +24,14 @@ export default {
     TodoHeader,
     TodoTitle,
     TodoList,
-    TodoFooter
+    TodoFooter,
+    Modal
   },
   data(){
     return {
-      todoItems: []
+      todoItems: [],
+      showModal: false,
+      modalText: ""
     };
   },
   created(){
@@ -42,6 +49,10 @@ export default {
     this.sortTodoLatest();  // 자동정렬 : 최신순
   },
   computed: {
+    // 할일 0
+    isEmpty() {
+      return this.todoItems.length <= 0 ? true : false;
+    },
     // 남은 일/전체 할일
     checkCount() {
       const checkLeftItems = () => {
@@ -59,21 +70,37 @@ export default {
         left: checkLeftItems()
       };
       return count;
-    }
+    },
   },
   methods: {
     // 추가
     addOneItem(todoItem){  
+      // 저장
       var value = {
           item : todoItem,
           date : `${getDate().month}/${getDate().date}`,
           time: getDate().time,   // 정렬 기준
           completed: false    // 완료여부 체크
       };
-      
       // key, value > string #데이터를 문자열로 변환:JSON
       localStorage.setItem(todoItem, JSON.stringify(value));
       this.todoItems.push(value);
+
+      // 빈 내용일 때
+      if (todoItem === "") {
+        this.showModal = !this.showModal;
+        this.modalText = "The form is empty. Please enter your task.";
+        return false;
+      }
+
+      // 중복일 때
+      for (let i = 0; i < this.todoItems.length; i++) {
+        if (this.todoItems[i].item === todoItem) {
+          this.showModal = !this.showModal;
+          this.modalText = "I think you've already had the task.";
+          return false;
+        }
+      }
     },
     // 정렬
     sortTodoLatest() {
@@ -114,11 +141,7 @@ export default {
 
 <style>
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
 }
 </style>
