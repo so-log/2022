@@ -4,7 +4,7 @@
     <TodoTitle v-on:addItem="addOneItem" :propsdata="checkCount" />
     <TodoList :propEmpty="isEmpty" :propsdata="todoItems" v-on:sortItem="sortAllItem" v-on:clearAll="clearAllItem" v-on:toggleItem="toggleOneItem" v-on:removeItem="removeOneItem" />
     <TodoFooter />
-    <Modal v-show="showModal" v-on:close="showModal=false">
+    <Modal v-show="showModal" v-on:close="showModal = false">
       <template v-slot:modal-text>{{ modalText }}</template>
     </Modal>
   </div>
@@ -75,17 +75,6 @@ export default {
   methods: {
     // 추가
     addOneItem(todoItem){  
-      // 저장
-      var value = {
-          item : todoItem,
-          date : `${getDate().month}/${getDate().date}`,
-          time: getDate().time,   // 정렬 기준
-          completed: false    // 완료여부 체크
-      };
-      // key, value > string #데이터를 문자열로 변환:JSON
-      localStorage.setItem(todoItem, JSON.stringify(value));
-      this.todoItems.push(value);
-
       // 빈 내용일 때
       if (todoItem === "") {
         this.showModal = !this.showModal;
@@ -101,6 +90,17 @@ export default {
           return false;
         }
       }
+
+      // 저장
+      var value = {
+          item : todoItem,
+          date : `${getDate().month}/${getDate().date}`,
+          time: getDate().time,   // 정렬 기준
+          completed: false    // 완료여부 체크
+      };
+      // key, value > string #데이터를 문자열로 변환:JSON
+      localStorage.setItem(todoItem, JSON.stringify(value));
+      this.todoItems.push(value);
     },
     // 정렬
     sortTodoLatest() {
