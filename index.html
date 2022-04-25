@@ -1,1 +1,583 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ferarri, Roma</title>
+
+    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // <![CDATA[
+            try {
+                window.addEventListener('load', function(){
+                    setTimeout(scrollTo, 0, 0, 1); 
+                }, false);
+            } catch(e) {}
+        // ]]>
+    </script>
+    <script src="js/main.js"></script>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#navbar">글로벌 네비게이션 바로가기</a>
+    </div>
+
+    <div class="wrap">
+        <div class="container-fluid">
+            <!-- header S-->
+            <header id="headerArea">
+                <h1 class="hidden">Ferarri</h1>
+                <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+                    <h2 class="hidden">네비게이션영역</h2>
+                    <div class="container">
+                        <!-- toggle menu -->
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><img src="images/logo2.png" alt="ferrari logo"></a>
+                        </div>
+                        <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#about"><h3>ABOUT</h3></a></li>
+                                <li><a href="#design"><h3>DESIGN</h3></a></li>
+                                <li><a href="#service"><h3>SERVICE</h3></a></li>
+                                <li><a href="#media"><h3>MEDIA</h3></a></li>
+                            </ul>
+                        </div>
+                    </div>        
+                </nav>
+            </header>
+            <!-- header E -->
+
+            <!-- visual(img) S -->
+            <div id="carousel-example-generic" class="carousel slide main_visual" data-ride="carousel">
+                <!-- Indicators(막대바) -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li class="second" data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides(이미지) -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="./images/v5.jpg" alt="Ferarri visual">
+                    </div>
+                    <div class="item">
+                        <img src="./images/v4.jpg" alt="Ferarri visual">
+                    </div>
+                    <div class="item">
+                        <img src="./images/v3.jpg" alt="Ferarri visual">
+                    </div>
+                </div>
+                <!-- Controls(화살표) -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- visual(img) E -->
+
+            <!-- content S -->
+            <article id="content" class="scrollcontent">
+                <h2 class="hidden">본문콘텐츠영역</h2>
+
+                <!-- aobut -->
+                <div id="about"></div>
+                <div id="menu1">
+                    <span class="menu">1&nbsp; &horbar; &nbsp;ABOUT</span>
+                    <h3 class="text-center">Ferrari, Roma</h3>
+                    <p  class="text-center"> 
+                        The Ferrari Roma, the new mid-front-engined 2+ coupé of the Prancing Horse, features refined proportions and timeless design combined with unparalleled
+                        performance and handling. With its distinctive flair and style, the car is a contemporary representation of the carefree, pleasurable way of life that
+                        characterised Rome in the 1950s and ‘60s.
+                    </p>
+                    <div class="row">
+                        <!-- car1.img -->
+                        <div class="car col-md-6 col-sm-12">
+                            <a href="#bs-example-modal-lg" data-toggle="modal">
+                                <img src="images/car1.png" alt="roma">
+                            </a>
+                            <span class="hidden_span hidden-md hidden-lg text-center">
+                                <i class="fas fa-caret-up"></i>CLICK!
+                            </span>
+                            <!-- <span class="car_span hidden-sm hidden-xs">
+                                <i class="fas fa-caret-up"></i>CLICK!
+                            </span> -->
+                            <!-- click_popup S-->
+                            <div class="modal fade" id="bs-example-modal-lg" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <!-- modal-header -->
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <span class="modal-title" id="myModalLabel">Ferrari, Roma</span>
+                                        </div>
+                                        <!-- modal-body -->
+                                        <div class="modal-body text-center">
+                                            <img src="./images/modal2.jpg" alt="engine">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <dl class="text-center">
+                                                        <dt>GEAR</dt>
+                                                        <dd class="text-justify">The introduction of the eighth gear has resulted in a reduction in fuel consumption without compromising on performance.</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <dl class="text-center">
+                                                        <dt>ZERO TURBO LAG</dt>
+                                                        <dd class="text-justify">Like all other Ferraris in the range, the Ferrari Roma delivers almost instantaneous throttle response thanks to its flat-plane crankshaft.</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <!-- hidden-sm -->
+                                            <div class="row hidden-sm hidden-xs">
+                                                <div class="col-sm-6">
+                                                    <dl class="text-center">
+                                                        <dt>BOOST MANAGEMENT</dt>
+                                                        <dd class="text-justify">This has allowed Ferrari to use longer gear ratios in the higher gears, which helps keep fuel consumption and emissions down</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <dl class="text-center">
+                                                        <dt>EXHAUST LINE</dt>
+                                                        <dd class="text-justify">By tradition, every single Ferrari engine has its own particular soundtrack that makes it unique. The Ferrari Roma is no exception that rule.</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- click_popup E -->
+                        </div>
+                        <!-- CO2 E -->
+                        <div class="col-md-3 col-xs-6">
+                            <dl>
+                                <dt>CO2 Emissions</dt>
+                                <dd>LOW: 404 G/KM</dd>
+                                <dd>MID: 246 G/KM</dd>
+                                <dd>HIGH: 220 G/KM</dd>
+                                <dd>EXTRA HIGH: 235 G/KM</dd>
+                                <dd>COMBINED: 255 G/KM</dd>
+                            </dl>
+                        </div>
+                        <!-- Fuel C -->
+                        <div class="col-md-3 col-xs-6">
+                            <dl>
+                                <dt>Fuel Consumption</dt>
+                                <dd>LOW: 17,8 L/100 KM</dd>
+                                <dd>MID: 10,8 L/100 KM</dd>
+                                <dd>HIGH: 9,7 L/100 KM</dd>
+                                <dd>EXTRA HIGH: 10,3 L/KM</dd>
+                                <dd>COMBINED: 11,2 L/KM</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- design -->
+                <div id="design"></div>
+                <div id="menu2">
+                    <div class="des_bg">
+                        <div class="des_title">
+                            <span class="menu">2&nbsp; &horbar; &nbsp;DESIGN</span>
+                            <h3 class="text-center">Elegant, Pure Design</h3>
+                        </div>
+                    </div>
+                    <p class="text-center">Emphasizing Ferrari Rome's sophistication and elegant minimalism while eliminating unnecessary details. Adaptive
+                        Full-LED headlights feature a horizontal line of illumination that implies the construction of the Ferrari Roman body,
+                        giving the appearance a tension. The rear of the vehicle features a Ferrari-specific aerodynamic device
+                        on the lap-around rear screen, featuring a twin tail lamp.
+                    </p>
+                    <!-- des_menu S -->
+                    <div class="des_inner">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#exterior" data-toggle="tab">Exterior</a></li>
+                            <li><a href="#interior" data-toggle="tab">Interior</a></li>
+                            <li><a href="#other" data-toggle="tab">Other</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Exterior S -->
+                            <div class="tab-pane active design_box" id="exterior">
+                                <ul class="row">
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="img_box">
+                                            <img src="./images/des1.jpg" alt="exterior1">
+                                        </div>
+                                        <dl>
+                                            <dt>NERO</dt>
+                                            <dd>The most legendary Ferrari of the 1960s,
+                                                a simple yet elegant front-engine car.</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="img_box">
+                                            <img src="./images/des2.jpg" alt="exterior2">
+                                        </div>
+                                        <dl>
+                                            <dt>SOLID</dt>
+                                            <dd>The Ferrari Roma represents the pinnacle
+                                                of performance in this category.</dd>
+                                        </dl>
+                                    </li>
+                                    <!-- hidden-sm -->
+                                    <li class="col-md-4 hidden-sm">
+                                        <div class="img_box">
+                                            <img src="./images/des3.jpg" alt="exterior3">
+                                        </div>
+                                        <dl>
+                                            <dt>BLU POZZI</dt>
+                                            <dd>With its distinctive flair and style, the car
+                                                is a contemporary of the carefree.</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul class="row hidden-xs">
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="img_box">
+                                            <img src="./images/des4.jpg" alt="exterior4">
+                                        </div>
+                                        <dl>
+                                            <dt>ROSSO CORSA</dt>
+                                            <dd>Features refined proportions and timeless
+                                                design combined.</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="img_box">
+                                            <img src="./images/des5.jpg" alt="exterior5">
+                                        </div>
+                                        <dl>
+                                            <dt>BIANCO AVUS</dt>
+                                            <dd>The engine reaches 620 cv at 7500 rpm
+                                                and is coupled.</dd>
+                                        </dl>
+                                    </li>
+                                    <!-- hidden-sm -->
+                                    <li class="col-md-4 hidden-sm">
+                                        <div class="img_box">
+                                            <img src="./images/des6.jpg" alt="exterior6">
+                                        </div>
+                                        <dl>
+                                            <dt>GIALLO MODENA</dt>
+                                            <dd>That has won the overall International En
+                                                gine of the Year award four years running. </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Exterior E -->
+                            <!-- Interior S -->
+                            <div class="tab-pane int_box text-center car_panel_div" id="interior">
+                                <img class="hidden-xs" src="./images/int0.jpg" alt="interior">
+                                <div class="panel-group row car_panel hidden-xs" id="accordion">
+                                    <!-- 빨간 화살표 -->
+                                    <div class="panel panel-default int_first interior_box">
+                                        <div class="panel-heading">
+                                            <!-- <h4 class="panel-title"></h4> -->
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                <i class="fas fa-mouse-pointer"></i>
+                                            </a>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <dl>
+                                                    <dt>Instrument cluster</dt>
+                                                    <dd>The crafting of the interior took its lead. </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default int_sec interior_box">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                                <i class="fas fa-mouse-pointer"></i>
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse ">
+                                            <div class="panel-body">
+                                                <dl>
+                                                    <dt>Central Display</dt>
+                                                    <dd>The exceptionally intuitive and user-friendly display. </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default int_third interior_box">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                                <i class="fas fa-mouse-pointer"></i>
+                                            </a>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <dl>
+                                                    <dt>Passenger display</dt>
+                                                    <dd>The passenger’s experience continues. </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- hidden-sm -->
+                                <ul class="row hidden-sm hidden-md hidden-lg design_box">
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="./images/int1.jpg" alt="interior">
+                                        </div>
+                                        <dl>
+                                            <dt>Instrument cluster</dt>
+                                            <dd>The crafting of the interior took its lead.</dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <div class="img_box">
+                                            <img src="./images/int2.jpg" alt="interior">
+                                        </div>
+                                        <dl>
+                                            <dt>Central Display</dt>
+                                            <dd>The exceptionally intuitive and user-friendly display.</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Interior E -->
+                            <!-- Other S -->
+                            <div class="tab-pane other" id="other">
+                                <ul class="row">
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="img_box">
+                                            <img src="./images/oth1.jpg" alt="other1">
+                                        </div>
+                                        <dl>
+                                            <dt>COMBUSTION ENGINE</dt>
+                                            <dd>The Ferrari Roma’s 620 CV engine belongs to the V8 turbo family.</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="img_box">
+                                            <img src="./images/oth2.jpg" alt="other2">
+                                        </div>
+                                        <dl>
+                                            <dt>DUAL GEARBOX</dt>
+                                            <dd>The main innovations of this version of the Ferrari V8 are new cam profiles.</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="col-md-4 hidden-sm">
+                                        <div class="img_box">
+                                            <img src="./images/oth4.jpg" alt="other3">
+                                        </div>
+                                        <dl>
+                                            <dt>REFINED POWER</dt>
+                                            <dd>The closed matrix filter traps particulate matter produced during combustion.</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Other E -->
+                        </div>
+                    </div>
+                    <!-- des_menu E -->
+                </div>
+        
+                <!-- service -->
+                <div id="service"></div>
+                <div id="menu3">
+                    <div class="sevice_inner">
+                        <span class="menu">3&nbsp; &horbar; &nbsp;SERVICE</span>
+                        <h3 class="text-center">After Service</h3>
+                        <ul class="row text-center">
+                            <li class="col-md-4 col-sm-6">
+                                <img class="img-rounded img-thumbnail" src="./images/ser1.jpg" alt="service">
+                                <dl>
+                                    <dt>Ferrari Power Warrenty</dt>
+                                    <dd class="text-justify hidden-xs">It has a unique Ferrari warranty program that allows you to extend your vehicle only warranty.</dd>
+                                </dl>
+                            </li>
+                            <li class="col-md-4 col-sm-6">
+                                <img class="img-rounded img-thumbnail" src="./images/ser2.jpg" alt="service">
+                                <dl>
+                                    <dt>Welcome Back Program</dt>
+                                    <dd class="text-justify hidden-xs">High quality inspection and repair by a skilled Ferrari specialist technician is available.</dd>
+                                </dl>
+                            </li>
+                            <!-- hidden-sm -->
+                            <li class="col-md-4 hidden-sm hidden-xs">
+                                <img class="img-rounded img-thumbnail" src="./images/ser3.jpg" alt="service">
+                                <dl>
+                                    <dt>Free Maintenance</dt>
+                                    <dd class="text-justify">This program is Ferrari's unique customer service, providing customers with a seven year.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>                
+                </div>
+        
+                <!-- media -->
+                <div id="media"></div>
+                <div id="menu4">
+                    <span class="menu">4&nbsp; &horbar; &nbsp;MEDIA</span>
+                    <h3 class="text-center">Media Gallery</h3>
+                    <p  class="text-center"> 
+                        Ferrari combines performance and handling with stylish proportions and timeless designs.
+                        Check the media for various Ferrari images.We will continue to play a role in delivering Ferrari's excellent craftsmanship and passion to our customers,
+                        and we will always do our best for the growth of the luxury supercar market and the safety of our customers.
+                    </p>
+                    <ul class="row">
+                        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <img src="./images/gal1-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Takayuki Yamada<span class="place">Japan</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">Japan</span>
+                                <span class="name">Takayuki Yamada</span>
+                            </div>
+                        </li>
+                        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <img src="./images/gal8-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Jung Haein<span class="place">Seoul</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">Seoul</span>
+                                <span class="name">Jung Haein</span>
+                            </div>
+                        </li>
+                        <!-- hidden-sm -->
+                        <li class="col-lg-3 col-md-4 hidden-sm hidden-xs ">
+                            <img src="./images/gal2-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Hans Zhang<span class="place">China</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg hidden-xs ">
+                                <span class="place">China</span>
+                                <span class="name">Hans Zhang</span>
+                            </div>
+                        </li>
+                        <li class="col-lg-3 hidden-md hidden-sm hidden-xs ">
+                            <img src="./images/gal4-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Jung Haein<span class="place">Busan</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">Busan</span>
+                                <span class="name">Jung Haein</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="row">
+                        <li class="col-lg-3 col-md-4 col-xs-6">
+                            <img src="./images/gal3-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Adam and Behati<span class="place">United States</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">United States</span>
+                                <span class="name">Adam and Behati</span>
+                            </div>
+                        </li>
+                        <li class="col-lg-3 col-md-4 col-xs-6">
+                            <img src="./images/gal6-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Tim Raue<span class="place">Germany</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">Germany</span>
+                                <span class="name">Tim Raue</span>
+                            </div>
+                        </li>
+                        <!-- hidden-sm -->
+                        <li class="col-lg-3 col-md-4 hidden-sm  hidden-xs">
+                            <img src="./images/gal5-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Peter Knogl<span class="place">Switzerland</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">Switzerland</span>
+                                <span class="name">Peter Knogl</span>
+                            </div>
+                        </li>
+                        <li class="col-lg-3 hidden-md hidden-md hidden-sm  hidden-xs">
+                            <img src="./images/gal7-1.jpg" alt="media gallery">
+                            <div class="span_box hidden-md hidden-sm hidden-xs">
+                                <span class="logo"><img src="./images/logo.png" alt="ferrari"></span>
+                                <span class="name">Levine Prinsloo<span class="place">New York</span></span>
+                            </div>
+                            <div class="span_hbox hidden-lg">
+                                <span class="place">New York</span>
+                                <span class="name">Levine Prinsloo</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- buy -->
+                <div id="menu5">
+                    <ul class="row">
+                        <li class="col-md-8 col-sm-7">
+                            <p>Discover your car model</p>
+                            <a href="#buy" class="buy_box">
+                                <span class="buy">BUY NOW</span>
+                            </a>
+                        </li>
+                        <li class="col-md-4 col-sm-5 buy_img">
+                            <img src="./images/buy1.jpg" alt="buy">
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- content E -->
+
+            <!-- footer S -->
+            <footer id="footerArea" class="text-center">
+                <a class="topMove" href="#"><i class="fas fa-angle-up"></i></a>
+                <div class="footer_inner">
+                    <ul class="sns">
+                        <li><a href="https://www.facebook.com/Ferrari" target="_blank" title="새 창으로 이동"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/Ferrari" target="_blank" title="새 창으로 이동"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/ferrari/" target="_blank" title="새 창으로 이동"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/ferrariworld" target="_blank" title="새 창으로 이동"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                    <p class="text-center">&copy; 2021 Ferrari S.P.A All rights reserved.</p>
+                    <address>Forza Motors, 456 Dosan-daero, Gangnam-gu, South Korea, Seoul, Seoul, 06062, KR</address>
+                </div>
+            </footer>
+            <!-- footer E -->
+        </div>
+    </div>
+</body>
+</html>
