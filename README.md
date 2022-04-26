@@ -13,15 +13,6 @@
 
 <br>
 
-## :mag: Overview
-
-
-    
-
-***
-
-
-
 ## :wrench: Tech Stack
 
 ### Development
