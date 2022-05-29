@@ -1,4 +1,6 @@
 function Modal(props){
+    // Backdrop 과 달리 함수를 한번 더 만들어서 사용
+    // 바로 onClick={props.onCancle()} 이렇게 넣어도 가능
     function cancelHandler(){
         props.onCancle();
     }
