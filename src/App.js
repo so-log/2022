@@ -25,7 +25,7 @@ function App() {
   const add = (list) =>
     setState((predata) => ({ ...predata, id: ++state.currentId }));
 
-  const remove = (id) => setState(state.filter(list => list.id !== id));
+  const remove = (id) => setState(state.filter((list) => list.id !== id));
 
   const update = ({ id, data }) =>
     setState((prelist) =>
@@ -34,7 +34,9 @@ function App() {
       })
     );
 
-  const filteredList = state.list.filter((info) => info.usage.indexOf(state.list.keyword) !== -1);
+  const filteredList = state.list.filter(
+    (info) => info.usage.indexOf(state.list.keyword) !== -1
+  );
 
   return (
     <React.Fragment>
@@ -47,9 +49,11 @@ function App() {
         />
       </p>
       <hr />
-      <AccountBookInfoList list={filteredList}
-          onRemove={remove}
-          onUpdate={update} />
+      <AccountBookInfoList
+        list={filteredList}
+        onRemove={remove}
+        onUpdate={update}
+      />
     </React.Fragment>
   );
 }

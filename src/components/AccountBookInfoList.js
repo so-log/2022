@@ -1,37 +1,28 @@
-import React, { Component } from "react";
+import React, { memo } from "react";
 import AccountBookInfo from "./AccountBookInfo";
 
-function AccountBookInfoList (){
+function AccountBookInfoList(props) {
   const defaultProps = {
     list: [],
     onRemove: () => console.warn("onRemove is not defined."),
     onUpdate: () => console.warn("onUpdate is not defined."),
   };
 
-  return (
-    <React.Fragment>{infoList}</React.Fragment>
-  );
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextProps.list !== this.props.list;
+  // }
+
+  const { list, onRemove, onUpdate } = props;
+  const infoList = list.map((info) => (
+    <AccountBookInfo
+      key={info.key}
+      data={info}
+      onRemove={onRemove}
+      onUpdate={onUpdate}
+    />
+  ));
+
+  return <React.Fragment>{infoList}</React.Fragment>;
 }
-
-class AccountBookInfoList extends Component {
-  static defaultProps = {
-    list: [],
-    onRemove: () => console.warn("onRemove is not defined."),
-    onUpdate: () => console.warn("onUpdate is not defined."),
-  };
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.list !== this.props.list;
-  }
-
-  render() {
-    const { list, onRemove, onUpdate } = this.props;
-    const infoList = list.map((info) => (
-      <AccountBookInfo key={info.key} data={info} onRemove={onRemove} onUpdate={onUpdate} />
-    ));
-
-    return <React.Fragment>{infoList}</React.Fragment>;
-  }
-}
-
+const Memorized = memo(AccountBookInfoList);
 export default AccountBookInfoList;
