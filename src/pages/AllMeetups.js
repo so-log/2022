@@ -16,12 +16,18 @@ function AllMeetupsPage(){
     }).then(data => {
         const meetups = [];
 
-        for (const key in data)
+        for (const key in data){
+          const meetup = {
+            id : key,
+            ...data[key]
+          };
 
+          meetups.push(meetup);
+        }
 
         // 데이터를 얻어오면 false > 더 이상 로딩 x
         setIsLoading(false);
-        setLoadedMeetups(data);
+        setLoadedMeetups(meetups);
     });
   }, []);
 
