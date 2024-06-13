@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@500;700&display=swap');
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+* { 
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+    font-size: 13px;
+    letter-spacing: 0.1rem;
+    color: #000;
+    /* background: linear-gradient(#d8ccf2, #ec998c); */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #faa384;
+}
+
+.main {
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 20px;
+}
+
+/** Header */
+header.header {
+    position: relative;
+    height: 77px;
+    background: #fff;
+    color: #483834;
+    border-bottom: 1px solid #3f291a;
+}
+
+h1.logo {
+    font-family: yg-jalnan;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+
+/** Title */
+
+.top {
+    width: 100%;
+    min-height: 25rem;
+    background-color: #fff;
+}
+
+.date {
+    font-family: yg-jalnan;
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.title.main {
+    margin-top: 40px;
+}
+
+/* 첫번째 말풍선 */
+h3.title_message {
+    left: 18px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+h3.title_message.name {
+    left: 200px;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #dbd8d9;
+	border-radius: 50.4em;
+    height: 35px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 30%;
+	width: 0;
+	height: 0;
+	border: 19px solid transparent;
+	border-right-color: #dbd8d9;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -2.5px;
+    margin-left: -11px;
+}
+
+/* 두번째 말풍선 */
+.title_task.speech-bubble2 {
+    margin-top: 
+    15px;
+}
+
+h3.task_message {
+    position: absolute;
+    left: 15px;
+    margin-top: 9px;
+}
+
+h3.task_message2 {
+    position: absolute;
+    left: 15px;
+    margin-top: 20px;
+}
+
+.task_count {
+    position: relative;
+    top: 30px;
+    left: 20px;
+
+}
+
+em.title_task-left {
+    font-family: 'yg-jalnan';
+    font-style: normal;
+    font-size: 3rem;
+}
+
+em.title_task-total {
+    font-family: 'yg-jalnan';
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.speech-bubble2 {
+    position: relative;
+    background: #dbd8d9;
+    border-radius: 1.3999999999999986em;
+    height: 125px;
+}
+
+.speech-bubble2:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 19px solid transparent;
+    border-right-color: #dbd8d9;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: 27.5px;
+    margin-left: -14px;
+}
+
+/** Input  */
+input{
+    border:0px;
+    background-color:transparent;
+}
+
+.speech-bubble3 {
+	position: relative;
+    top: 9px;
+	background: #545454;
+	border-radius: 50.4em;
+    height: 35px;
+}
+
+.speech-bubble3:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: #545454;
+	border-right: 0;
+	border-bottom: 0;
+    margin-top: -6px;
+    margin-right: -13px;
+}
+
+/** LIST */
+.todoMain {
+    background: #faa384;
+}
+
+.op {
+    position: relative;
+    background: #fff;
+    border-radius: 2rem;
+    height: 380px;
+    background-color: rgba( 255, 255, 255, 0.3 );
+}
+
+/* Controller */
+.blind {
+    display: none;
+}
+
+.select {
+    position: relative;
+    top: 23px;
+    left: 30px;
+}
+
+button.clear {
+    float: right;
+    position: relative;
+    right: 20px;
+    border: 0px;
+    border-radius: 0.3rem;
+    /* font-size: 10px; */
+    letter-spacing: 0.014rem;
+    /* font-size: 1.4rem; */
+    color: #ababab;
+    transition: color 0.2s;
+}
+
+button.clear:hover{
+    color: #8e8e8e;
+}
+
+/* List */
+/* 수정해나가기 */
+.list {
+    position: relative;
+    margin-top: 40px;
+    margin-left: -30px;
+}
+
+.list_item {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem 0 5rem;
+    /* background-color: #fff;
+    border-radius: 4px; */
+}
+
+.list__text {
+    color: #bababa;
+    text-decoration: line-through;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.list_item label {
+    padding: 1.6rem 0;
+    font-size: 1.5rem;
+    line-height: 1.24;
+    letter-spacing: 0.017rem;
+    cursor: pointer;
+}
+
+.list_item label:before {
+    position: absolute;
+    top: 10%;
+    left: 1.4rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 1px #818181;
+    background-color: #ffffff;
+    content: "";
+    cursor: pointer;
+}
+
+/* 다음 네모 박스 */
+.list_item label:after {
+    position: absolute;
+    display: block;
+    top: 10%;
+    left: 1.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 1px #818181;
+    background-color: #ffffff;
+    content: "";
+    cursor: pointer;
+}
+
+.list_text {
+    margin-top: -1.4rem;
+    position: relative;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.list_right {
+    text-align: right;
+    /* margin-left: 1.3rem; */
+}
+
+button.list_delete {
+    background: none;
+    border: 0px;
+    position: relative;
+    top: -50px;
+    right: -25px;
+    font-size: 20px;
+    color: #ababab;
+    font-weight: lighter;
+}
+
+button.list_delete:hover{
+    color: #8e8e8e;
+    /* color: #343434; */
+}
+
+p.list_date {
+    font-size: 10px;
+    font-weight: bold;
+    color: #939393;
+    letter-spacing: 0.02rem;
+    position: relative;
+    top: -60px;
+    right: -20px;
+}
+
+/** Footer */
+footer.footer {
+    text-align: center;
+    color: #d7d5d5;
+    background: #faa384;
+}
